@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apresentação sobre IDEs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://upload.wikimedia.org/wikipedia/commons/6/6a/Programming-code.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100vh;
+      padding: 50px;
+      box-sizing: border-box;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .slide.active {
+      display: flex;
+    }
+
+    .slide.two-columns {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .slide.two-columns .container {
+      width: 45%;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.3em;
+    }
+
+    .slide .container ul,
+    .slide .container ol {
+      font-size: 1.2em;
+      line-height: 1.6em;
+      padding-left: 20px;
+      text-align: left;
+    }
+
+    .slide .container li {
+      margin-bottom: 10px;
+    }
+
+    .controls {
+      position: absolute;
+      bottom: 5px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .controls button {
+      padding: 10px 20px;
+      font-size: 1em;
+      margin: 0 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: white;
+      color: black;
+    }
+
+    .controls button:hover {
+      background-color: #777;
+      color: #fff;
+    }
+
+    /* Media Query para celular */
+    @media (max-width: 768px) {
+      .slide.two-columns {
+        flex-direction: column;
+      }
+
+      .slide.two-columns .container {
+        width: 90%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+
+    <!-- Slide 1: capa -->
+    <div class="slide active">
+      <h1>IDE - Ambiente de Desenvolvimento Integrado</h1>
+      <p>Uma introdução às IDEs e suas funcionalidades</p>
+      <p><em>Aprenda sobre ferramentas que facilitam a programação</em></p>
+    </div>
+
+
+
+    <!-- Slide 2: O que é IDE -->
+    <div class="slide two-columns">
+      <div class="container">
+        <h2>O que é uma IDE?</h2>
+        <p>IDE significa "Integrated Development Environment" ou Ambiente de Desenvolvimento Integrado.
+          É uma ferramenta que reúne editor de código, compilador/interpreter, debugger e outros recursos em um único
+          programa.</p>
+        <h2>Benefícios</h2>
+        <p>Facilita a programação, reduz erros, aumenta produtividade e oferece suporte a múltiplas linguagens e
+          frameworks.</p>
+
+      </div>
+      <div class="container">
+
+        <ul>
+          <li><strong>Editor de Código:</strong> Onde você escreve e edita seu código, com destaque de sintaxe e
+            autocompletar.</li>
+          <li><strong>Compilador/Interpretador:</strong> Converte o código em linguagem de máquina ou executa instruções
+            diretamente.</li>
+          <li><strong>Debugger:</strong> Permite localizar e corrigir erros passo a passo, inspecionando variáveis e
+            fluxo
+            de execução.</li>
+          <li><strong>Ferramentas adicionais:</strong> Controle de versão, integração com bibliotecas e frameworks,
+            terminal embutido, gerenciador de pacotes.</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- Slide 3: Exemplos de IDEs populares -->
+    <!-- Slide detalhado: Visual Studio Code e IntelliJ IDEA -->
+    <div class="slide two-columns">
+      <div class="container">
+        <h2>Visual Studio Code</h2>
+        <p>IDE leve e extensível, muito usada para desenvolvimento web, Python e outras linguagens.</p>
+        <ul>
+          <li>Destaque de sintaxe e autocompletar inteligente.</li>
+          <li>Depuração integrada com breakpoints e inspeção de variáveis.</li>
+          <li>Suporte a extensões para linguagens, frameworks e ferramentas adicionais.</li>
+          <li>Integração com Git e outros sistemas de versionamento.</li>
+        </ul>
+      </div>
+      <div class="container">
+        <h2>NetBeans</h2>
+        <p>IDE tradicional para Java, PHP e outras linguagens, extensível via plugins e ideal para projetos acadêmicos e
+          corporativos.</p>
+        <ul>
+          <li>Editor de código robusto com refatoração e destaque de sintaxe.</li>
+          <li>Ferramentas de depuração completas com breakpoints e inspeção de variáveis.</li>
+          <li>Suporte a múltiplas linguagens e frameworks.</li>
+          <li>Integração com sistemas de build e controle de versão.</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- Slide 4: Outros exemplos -->
+    <!-- Slide: PyCharm e Eclipse (detalhado) -->
+    <div class="slide two-columns">
+      <div class="container">
+        <h2>PyCharm</h2>
+        <p>IDE especializada em Python, muito utilizada por desenvolvedores que precisam de ferramentas avançadas para
+          codificação e testes.</p>
+        <ul>
+          <li>Destaque de sintaxe e autocompletar inteligente.</li>
+          <li>Ferramentas de teste integradas e análise de código.</li>
+          <li>Integração com frameworks populares de Python (Django, Flask, etc.).</li>
+          <li>Depuração completa com breakpoints e inspeção de variáveis.</li>
+        </ul>
+      </div>
+      <div class="container">
+        <h2>Eclipse</h2>
+        <p>IDE tradicional para Java, amplamente usada em projetos acadêmicos e corporativos, extensível via plugins.
+        </p>
+        <ul>
+          <li>Suporte a múltiplas linguagens através de plugins.</li>
+          <li>Editor de código robusto com refatoração e destaque de sintaxe.</li>
+          <li>Ferramentas de debugging e integração com sistemas de build.</li>
+          <li>Popular em desenvolvimento acadêmico e industrial.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Slide 5 (continuação de exemplos de IDEs) -->
+    <div class="slide two-columns">
+      <div class="container">
+        <h2>Visual Studio</h2>
+        <p>IDE da Microsoft, ideal para C#, .NET, C++ e desenvolvimento de aplicações desktop, web e mobile.</p>
+        <ul>
+          <li>Editor avançado com IntelliSense e destaque de sintaxe.</li>
+          <li>Depuração completa com breakpoints e inspeção de variáveis.</li>
+          <li>Integração com Git e ferramentas de testes automatizados.</li>
+        </ul>
+      </div>
+      <div class="container">
+        <h2>IntelliJ IDEA</h2>
+        <p>IDE voltada para Java e Kotlin, muito utilizada em grandes projetos corporativos e acadêmicos.</p>
+        <ul>
+          <li>Recursos avançados de refatoração e debugging.</li>
+          <li>Suporte a múltiplos frameworks e linguagens adicionais.</li>
+          <li>Integração com sistemas de build e controle de versão.</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- Slide 5: Funcionalidades -->
+    <div class="slide two-columns">
+      <div class="container">
+        <h2>Editor de Código</h2>
+        <p>Fornece destaque de sintaxe, autocompletar e navegação fácil pelo código.</p>
+      </div>
+      <div class="container">
+        <h2>Depuração</h2>
+        <p>Permite localizar e corrigir erros usando breakpoints, inspeção de variáveis e execução passo a passo.</p>
+      </div>
+    </div>
+    <!-- Slide 6: SDKs -->
+    <div class="slide two-columns">
+      <div class="container">
+        <h2>O que é um SDK?</h2>
+        <p>SDK significa "Software Development Kit" ou Kit de Desenvolvimento de Software.
+          É um conjunto de ferramentas, bibliotecas, documentação e exemplos que auxiliam na criação de aplicações para
+          uma plataforma específica.</p>
+      </div>
+      <div class="container">
+        <h2>Principais usos</h2>
+        <ul>
+          <li>Fornece APIs e bibliotecas prontas para acelerar o desenvolvimento.</li>
+          <li>Inclui documentação detalhada e exemplos de código.</li>
+          <li>Facilita integração com sistemas, frameworks ou dispositivos específicos.</li>
+          <li>Auxilia no desenvolvimento de aplicativos móveis, web ou desktop.</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Slide 7: Relação entre IDEs e SDKs -->
+    <div class="slide two-columns">
+      <div class="container">
+        <h2>Como IDEs e SDKs trabalham juntas</h2>
+        <p>Uma IDE utiliza SDKs para fornecer todas as ferramentas necessárias ao desenvolvimento.
+          Enquanto a IDE oferece o ambiente de codificação, debugging e execução, o SDK fornece as bibliotecas, APIs e
+          documentação para criar aplicações específicas.</p>
+      </div>
+      <div class="container">
+        <h2>Exemplo prático</h2>
+        <ul>
+          <li>Ao programar para Android, você pode usar o Android Studio (IDE) junto com o Android SDK.</li>
+          <li>A IDE integra o SDK, permitindo criar, compilar e testar apps sem precisar configurar manualmente todas as
+            ferramentas.</li>
+          <li>O SDK fornece o acesso às APIs da plataforma e a IDE facilita o uso dessas APIs.</li>
+          <li>Essa combinação aumenta produtividade e reduz erros.</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Slide 8: APIs da Plataforma -->
+    <div class="slide two-columns">
+      <div class="container">
+        <h2>O que são APIs da Plataforma?</h2>
+        <p>API significa "Application Programming Interface" ou Interface de Programação de Aplicações.
+          É um conjunto de funções e protocolos que permite que seu programa interaja com o sistema operacional,
+          frameworks ou serviços de uma plataforma específica.</p>
+      </div>
+      <div class="container">
+        <h2>Exemplos e usos</h2>
+        <ul>
+          <li>Android SDK fornece APIs para acessar câmera, GPS, sensores e armazenamento do dispositivo.</li>
+          <li>APIs permitem que aplicativos usem funcionalidades do sistema sem precisar reinventar a roda.</li>
+          <li>Facilitam integração entre diferentes serviços e aplicações.</li>
+          <li>Ex.: Um app de mapas usa API de geolocalização para obter a posição do usuário.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Slide: Instalando o Visual Studio Code -->
+    <div class="slide two-columns">
+      <div class="container">
+        <h2>Passo a Passo para Instalação</h2>
+        <ol>
+          <li>Acesse o site oficial: <a href="https://code.visualstudio.com/" target="_blank"
+              style="color: #fff;">https://code.visualstudio.com/</a></li>
+          <li>Escolha o instalador compatível com seu sistema operacional (Windows, macOS, Linux).</li>
+          <li>Baixe o instalador e execute-o.</li>
+          <li>Siga as instruções do assistente de instalação, marcando opções como "Adicionar ao PATH" e "Criar ícone na
+            área de trabalho".</li>
+          <li>Conclua a instalação e abra o Visual Studio Code.</li>
+        </ol>
+      </div>
+      <div class="container">
+        <h2>Dicas e Requisitos</h2>
+        <ul>
+          <li>Certifique-se de ter espaço suficiente em disco (aprox. 200 MB).</li>
+          <li>Para Windows, é recomendado executar o instalador como administrador.</li>
+          <li>Após a instalação, você pode adicionar extensões para Python, C++, JavaScript e outras linguagens.</li>
+          <li>Atualize sempre para a versão mais recente para garantir estabilidade e novos recursos.</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Slide sobre vídeo -->
+    <div class="slide two-columns">
+      <div class="container">
+        <h2>Veja mais sobre IDEs</h2>
+        <p>Assista a este vídeo para aprofundar seu conhecimento sobre IDEs e como elas facilitam o trabalho de
+          desenvolvedores.</p>
+      </div>
+      <div class="container">
+        <!-- Vídeo do YouTube embedado -->
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/GPcIjsz-2cA" title="Vídeo sobre IDEs"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Slide Final -->
+    <div class="slide">
+      <h1>Fim da Apresentação</h1>
+      <p style="font-size: 1.5em; margin-top: 20px;">
+        Obrigado por acompanhar esta aula sobre <strong>IDEs</strong>!
+      </p>
+      <p style="font-size: 1.2em; margin-top: 10px;">
+        Dúvidas? Pergunte no final da aula ou revise os conceitos apresentados.
+      </p>
+      <p style="margin-top: 40px; font-size: 1.3em;">
+        Continue praticando para dominar suas ferramentas de desenvolvimento.
+      </p>
+    </div>
+
+
+
+
+
+  </div>
+  <!-- Controles -->
+  <div class="controls">
+    <button id="prev">Anterior</button>
+    <button id="next">Próximo</button>
+  </div>
+
+  <!-- Script de navegação -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+    }
+
+    document.getElementById('prev').addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      } else if (e.key === 'ArrowRight') {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+    });
+  </script>
+
+</body>
+
+</html>
