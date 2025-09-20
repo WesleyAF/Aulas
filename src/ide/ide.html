@@ -16,72 +16,109 @@
       overflow: hidden;
     }
 
-    /* Por padrão os slides ocupam 100vh sem scroll */
-.slide {
-  display: none;
-  width: 100%;
-  height: 100vh;
-  padding: 50px;
-  box-sizing: border-box;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  overflow-y: auto; /* permite rolagem quando o conteúdo passa do limite */
-}
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100vh;
+      padding: 50px;
+      box-sizing: border-box;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
 
-.slide.active {
-  display: flex;
-}
+    .slide.active {
+      display: flex;
+    }
 
-/* Controles fixos no rodapé */
-.controls {
-  position: fixed;
-  bottom: 10px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  z-index: 999;
-}
+    .slide.two-columns {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
 
-.controls button {
-  padding: 10px 20px;
-  font-size: 1em;
-  margin: 0 10px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  background-color: white;
-  color: black;
-}
+    .slide.two-columns .container {
+      width: 45%;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
 
-.controls button:hover {
-  background-color: #777;
-  color: #fff;
-}
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
 
-/* Modo celular: slides ficam empilhados */
-@media (max-width: 768px) {
-  .slide {
-    height: auto;       /* ocupa só o necessário */
-    min-height: 100vh;  /* garante tela cheia mínima */
-    padding: 20px;
-    flex-direction: column !important;
-    justify-content: flex-start;
-    align-items: center;
-    overflow-y: auto;   /* rolagem ativada */
-  }
+    h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
 
-  .slide.two-columns {
-    flex-direction: column; /* força containers em coluna */
-  }
+    p {
+      font-size: 1.3em;
+    }
 
-  .slide.two-columns .container {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
+    .slide .container ul,
+    .slide .container ol {
+      font-size: 1.2em;
+      line-height: 1.6em;
+      padding-left: 20px;
+      text-align: left;
+    }
 
+    .slide .container li {
+      margin-bottom: 10px;
+    }
+
+    .controls {
+      position: absolute;
+      bottom: 5px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .controls button {
+      padding: 10px 20px;
+      font-size: 1em;
+      margin: 0 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: white;
+      color: black;
+    }
+
+    .controls button:hover {
+      background-color: #777;
+      color: #fff;
+    }
+
+    /* Media Query para celular */
+    @media (max-width: 768px) {
+      .slide {
+        height: auto;
+        /* altura ajustável ao conteúdo */
+        min-height: 100vh;
+        /* garante tela cheia mínima */
+        padding: 20px;
+        flex-direction: column !important;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-y: auto;
+        /* rolagem ativada apenas no celular */
+      }
+
+      .slide.two-columns {
+        flex-direction: column;
+        /* força containers em coluna */
+      }
+
+      .slide.two-columns .container {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
   </style>
 </head>
 
