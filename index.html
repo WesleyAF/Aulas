@@ -1,67 +1,82 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Inicial</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                  url('https://thumbs.dreamstime.com/b/c%C3%B3digo-sobre-fundo-escuro-do-programador-de-programa%C3%A7%C3%A3o-python-trabalhando-em-um-escrit%C3%B3rio-desenvolvedores-software-242773376.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      min-height: 100vh;
-      padding: 40px 20px; /* espaço no topo e nas laterais */
-      box-sizing: border-box;
-    }
-
-    h1 {
-      font-size: 3em;
-      margin-bottom: 30px;
-    }
-
-    .menu {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      text-align: left;
-    }
-
-    .menu li {
-      margin: 15px 0;
-    }
-
-    .menu a {
-      display: block;
-      padding: 15px 25px;
-      font-size: 1.3em;
-      color: #fff;
-      text-decoration: none;
-      background-color: #1abc9c;
-      border-radius: 8px;
-      transition: background 0.3s;
-      width: 250px;
-    }
-
-    .menu a:hover {
-      background-color: #16a085;
-    }
-  </style>
+  <title>Exercícios de JavaScript</title>
 </head>
 <body>
+  <h1>Exercícios de JavaScript</h1>
 
-  <h1>Menu Principal</h1>
+  <h2>Sobre Variáveis</h2>
+  <pre><code>
+/*
+  Variáveis 
+  Em JavaScript, variáveis são contêineres para armazenar dados, declaradas com as palavras-chave var,
+  let ou const. const é para valores que não mudam, let é para valores que podem ser reatribuídos,
+  e var é uma forma mais antiga considerada obsoleta para novos códigos. 
 
-  <ul class="menu">
-    <li><a href="src/ide/ide.html">Apresentação IDE</a></li>
-    
-  </ul>
+  As variáveis podem conter diversos tipos de dados como números, textos (strings) e booleanos (verdadeiro/falso),
+  e são essenciais para a manipulação de dados em programas. 
+
+  Diferenças entre var, let e const:
+
+  const (constante): É usada para declarar variáveis que terão um valor fixo e que não podem ser alteradas após sua declaração. 
+  Exemplo: const PI = 3.14; 
+
+  let: É usada para declarar variáveis que podem ter seu valor alterado durante a execução do código. 
+  Exemplo: let nome = "Maria"; 
+
+  var: É a forma mais antiga de declarar variáveis, mas é menos utilizada em códigos modernos, sendo let e const recomendadas.
+  Ela tem um escopo mais amplo, e seu uso é considerado obsoleto. 
+*/
+  </code></pre>
+
+  <h2>Exercício 1: Nome do Usuário</h2>
+  <pre><code>
+let nome = prompt("Digite seu nome");  // prompt serve para pedir ao usuário digitar algo
+console.log(nome);                     // console.log exibe no console o que estiver dentro dos parênteses
+  </code></pre>
+
+  <h2>Exercício 2: Soma de Dois Números</h2>
+  <pre><code>
+let num1 = (prompt("Digite o primeiro número:"));
+let num2 = (prompt("Digite o segundo número:"));
+let soma = num1 + num2;
+alert("A soma é: " + soma);   // alert serve para exibir uma mensagem de alerta
+  </code></pre>
+
+  <h2>Sobre Estrutura de Condição</h2>
+  <pre><code>
+/*
+  Em JavaScript, estruturas condicionais como if, else e else if
+  permitem que o código tome decisões e execute blocos diferentes 
+  com base em condições (verdadeiras ou falsas). 
+
+  - if: executa se a condição for verdadeira
+  - else: executa se a condição for falsa
+  - else if: verifica outras condições em sequência
+*/
+  </code></pre>
+
+  <h2>Exercício 3: Crie uma calculadora em que o usuario digita o primeiro numero, depois o sinal da operacao, depois o segundo numero</h2>
+  <pre><code>
+
+  </code></pre>
+
+  <h2>Exercício 4: Peça ao usuário que digite sua idade e imprima na tela se é maior de idade ou não</h2>
+  <pre><code>
+
+  </code></pre>
+
+  <h2>Exercício 5: Peça ao usuário para digitar um número e imprima na tela se é par ou impar</h2>
+  <pre><code>
+
+  </code></pre>
+
+  <h2>Exercício 6: Peça ao usuário que digite a noa de 1 a 10, e imprima na tela se ele foi aprovado ou não</h2>
+  <pre><code>
+
+  </code></pre>
 
 </body>
 </html>
