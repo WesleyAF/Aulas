@@ -61,6 +61,32 @@ alert("A soma é: " + soma);   // alert serve para exibir uma mensagem de alerta
   <h2>Exercício 3: Crie uma calculadora em que o usuario digita o primeiro numero, depois o sinal da operacao, depois o segundo numero</h2>
   <pre><code>
 
+  // Solicita os dois números e a operação desejada
+const num1 = parseFloat(prompt("Digite o primeiro número:"));
+const operacao = prompt("Digite a operação (+, -, *, /):");
+const num2 = parseFloat(prompt("Digite o segundo número:"));
+
+let resultado;
+
+// Verifica a operação com if-else
+if (operacao === "+") {
+    resultado = num1 + num2;
+} else if (operacao === "-") {
+    resultado = num1 - num2;
+} else if (operacao === "*") {
+    resultado = num1 * num2;
+} else if (operacao === "/") {
+    if (num2 !== 0) {
+        resultado = num1 / num2;
+    } else {
+        resultado = "Erro: divisão por zero!";
+    }
+} else {
+    resultado = "Operação inválida!";
+}
+
+console.log("Resultado:", resultado);
+
   </code></pre>
 
   <h2>Exercício 4: Peça ao usuário que digite sua idade e imprima na tela se é maior de idade ou não</h2>
